@@ -22,8 +22,14 @@ Input data must contain:
   - absoption coefficient "eta"
   
 2. specifics of the resonance one would like to consider
-  - diffracted spctra in which resonance is wanted "r"
+  - diffracted spectra in which resonance is wanted "r"
   - wavelength of the fallen beam "lambda_res"
   - angle at which the beam falls "theta_res"
   
 3. desired distribution of outgoing spectra "fluxes"
+
+# TODO
+1. Get rid of limitation of 20 outgoing spectra
+2. Add 3D data plot
+3. Add double resonance
+4. Finish wiki page
