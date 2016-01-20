@@ -1,0 +1,7 @@
+function [ epsilon ] = calcEps( omega )
+%CALCEPS Calculating dielectric permittivity using Drude model
+%   
+
+
+end
+

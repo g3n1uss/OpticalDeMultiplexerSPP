@@ -1,0 +1,22 @@
+classdef Material
+    %MATERIAL Object material
+    %   Object have the following properties:
+    %   plasma frequency \omega_p
+    %       \gamma
+    
+    properties
+        Omega_p=13.8*10^15;%default value is characteristic of gold
+        gammA=10^14;
+    end
+    
+    methods
+        %   Constructor - build material (find epsilon)
+        function obj=Material(omega_p,gamma)
+            Omega_p=
+        end
+        
+        calcEps(omega)
+    end
+    
+end
+

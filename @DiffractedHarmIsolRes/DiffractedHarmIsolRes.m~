@@ -1,0 +1,83 @@
+classdef DiffractedHarmIsolRes
+    %DIFFRACTEDHARMISOLRES Calculating nonresonance harmonics
+    
+    
+    properties
+        %   h_N - array 1 by 20, 10th harmonic corresponds to 0th
+        %   R - Frensel coefficient reflection
+        %It's not allowed define h_N and R as number if they will be
+        %symbols in building functional
+        h_N;%h_N=zeros(1,20);
+        R=0;
+    end
+    
+    methods
+        function obj=calcNonRes(obj,r,h_r,xi,xi_0,beta)
+            if(isnumeric(xi(1)))
+                h=zeros(1,20);
+            end
+            for N=-9:10
+                %   0th harmonics, in this calculation 10th
+                if(N==0)
+                    obj.R=(beta(N+10)-xi_0)/(beta(N+10)+xi_0);
+                    if(r<0)
+                        if(isnumeric(xi(-r)))
+                           h(N+10)=obj.R-xi(-r+10)*h_r/(beta(N+10)+xi_0); %h(N+10)=obj.R-xi(-r)*h_r/(beta(N+10)+xi_0);
+                        else
+                            xir=sym(xi(-r));
+                            h(N+10)=obj.R-xir*h_r/(beta(N+10)+xi_0);
+                        end
+                    else
+                        if(isnumeric(xi(r)))
+                            h(N+10)=obj.R-xi(-r+10)*h_r/(beta(N+10)+xi_0);%h(N+10)=obj.R+conj(xi(r))*h_r/(beta(N+10)+xi_0);
+                        else
+                            xir=sym(xi(r));
+                            h(N+10)=obj.R+xir*h_r/(beta(N+10)+xi_0);
+                        end
+                    end
+                else
+                     if(N-r>0&&N-r<21)%if(abs(N-r)<=length(xi))%If we have correnspond xi() go in
+                        if(N-r<0)
+                            if(isnumeric(xi(r-N)))%For numeric calculations
+                                xitmp=xi(N-r+10);%xitmp=-conj(xi(r-N));%it's property of chosen xi
+                            else
+                                xitmp=sym(xi(r-N));%It's correct for xi=i*u (without phase in impedance)
+                            end
+                        elseif(N-r==0)
+                            xitmp=0;%xi(0)=0 it's because of our choosing xi
+                        else
+                            if(isnumeric(xi(N-r)))
+                                xitmp=xi(N-r+10);
+                            else
+                                xitmp=sym(xi(N-r));
+                            end
+                        end
+                    else
+                        xitmp=0;
+                    end
+                    if(abs(N)<=length(xi))%If we have correspod xi() go in
+                        if(N<0)
+                            if(isnumeric(xi(-N)))%For numeric calculations
+                                xitmp1=-conj(xi(-N));
+                            else%For building functional
+                                xitmp1=sym(xi(-N));
+                            end
+                        elseif(N>0)
+                            if(isnumeric(xi(N)))
+                                xitmp1=xi(N);
+                            else
+                                xitmp1=sym(xi(N));
+                            end
+                        end
+                    else
+                        xitmp1=0;
+                    end
+                    h(N+10)=-(xitmp1+xitmp*h_r)/beta(N+10);
+                end
+            end
+            obj.h_N=h;
+        end
+    end
+    
+end
+
