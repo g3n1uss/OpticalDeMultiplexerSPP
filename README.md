@@ -3,6 +3,10 @@
 ## How to run the code?
 To try the code run "run_me.m".
 
+## What is "demultiplexor", "SPP", "Impedance"?
+
+Answers on these and other questions can be found on the corresponding [wiki page](https://github.com/g3n1uss/OpticalImpedanceDeMultiplexerSPP/wiki).
+
 ## What are the default settings?
 
 Default settings include a gold film, the resonace in 1st order, 
