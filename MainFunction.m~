@@ -91,8 +91,6 @@ dataGenFinal=DataGenerator(r,lambda_res,theta_res,goldsurface,diffSpectra,xifina
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Actually data plotting
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% set the line width
-linewidth=2;
 % plot the grating
 t=0:.01:1;
 % initial grating
@@ -110,7 +108,7 @@ labelXi_f=strcat(labelUfinal, labelPsifinal,', \xi_0^{"}=',...
 % set the display window to fullscreen
 figure('units','normalized','outerposition',[0 0 1 1]);
 % draw grating
-subplot(3,2,[1,2]),plot(t,grat_i,'--k',t,grat_f,'k','LineWidth',linewidth),text(0.3,...
+subplot(3,2,[1,2]),plot(t,grat_i,'--k',t,grat_f,'k'),text(0.3,...
     imag(goldsurface.xi0)/2,labelXi),...
     text(0.3,imag(goldsurface.xi0)/1.5,labelXi_f),xlabel('x/d'),...
     ylabel('\xi^{"}'),legend('Grating from analytical solution','Corrected grating'),...
@@ -119,7 +117,7 @@ subplot(3,2,[1,2]),plot(t,grat_i,'--k',t,grat_f,'k','LineWidth',linewidth),text(
 
 % plot the resonance amplitude from then analytical solution
 subplot(3,2,3), plot(wavelength_w(:),abs_h_res2_w(:),'--k',wavelength_w_f(:),...
-    abs_h_res2_w_f(:),'k','LineWidth',linewidth),grid on, xlabel('\lambda, nm'),ylabel('|h_r|^2'),...
+    abs_h_res2_w_f(:),'k'),grid on, xlabel('\lambda, nm'),ylabel('|h_r|^2'),...
     legend('Analytical solution','Corrected solution'),...
     title('Resonance amplitude')
 
@@ -131,42 +129,42 @@ labelS=GenerateLabel('s',s);
 legendlabel=cell(1,2*(out_num+1));
 ind=1;
 legendlabel{ind}='A^i';
-ind=ind+1;
-legendlabel{ind}='A^f';
 for i=Nm:Np
     ind=ind+1;
     legendlabel{ind}=strcat('s^i_{',num2str(i),'}');
+end
+ind=ind+1;
+legendlabel{ind}='A^f';
+for i=Nm:Np
     ind=ind+1;
     legendlabel{ind}=strcat('s^f_{',num2str(i),'}');
 end
 % plot
 subplot(3,2,4),
-plot(wavelength_w(:),absorption_w(:),'--','LineWidth',linewidth);
+plot(wavelength_w(:),absorption_w(:),'--');
 hold on
-plot(wavelength_w_f(:),absorption_w_f(:),'-','LineWidth',linewidth);
+plot(wavelength_w_f(:),absorption_w_f(:),'-');
 for i=Nm+10:Np+10
-    plot(wavelength_w(:),s_nonres_w(:,i),'--','LineWidth',linewidth);
-    plot(wavelength_w_f(:),s_nonres_w_f(:,i),'-','LineWidth',linewidth);
+    plot(wavelength_w(:),s_nonres_w(:,i),'--');
+    plot(wavelength_w_f(:),s_nonres_w_f(:,i),'-');
 end
 grid on, text(wavelength_w(10),0.8,labelS),xlabel('\lambda, nm'),...
-    legend(legendlabel{:}), title('Energy fluxes of outgoing spectra')
+    legend(legendlabel{:}), title('')
 hold off
 
 % plot the corrected resonance harmonic
 subplot(3,2,5), plot(thetas_a(:),abs_h_res2_a(:),'--k',thetas_a_f(:),...
-    abs_h_res2_a_f(:),'k','LineWidth',linewidth),grid on, xlabel('\theta, degrees'),ylabel('|h_r|^2'),...
-    legend('Analytical solution','Corrected solution'),...
-    title('Resonance amplitude')
+    abs_h_res2_a_f(:),'k'),grid on, xlabel('\theta, degrees'),ylabel('|h_r|^2'),...
+    legend('Analytical solution','Corrected solution')
 
 % plot the corrected fluxes
 subplot(3,2,6),
-plot(thetas_a(:),absorption_a(:),'--','LineWidth',linewidth);
+plot(thetas_a(:),absorption_a(:),'--');
 hold on
-plot(thetas_a_f(:),absorption_a_f(:),'-','LineWidth',linewidth);
+plot(thetas_a_f(:),absorption_a_f(:),'-');
 for i=Nm+10:Np+10
-    plot(thetas_a(:),s_nonres_a(:,i),'--','LineWidth',linewidth);
-    plot(thetas_a_f(:),s_nonres_a_f(:,i),'-','LineWidth',linewidth);
+    plot(thetas_a(:),s_nonres_a(:,i),'--');
+    plot(thetas_a_f(:),s_nonres_a_f(:,i),'-');
 end
-grid on, text(thetas_a(10),0.8,labelS),xlabel('\lambda, nm'),...
-    legend(legendlabel{:}),title('Energy fluxes of outgoing spectra')
+grid on, text(thetas_a(10),0.8,labelS),xlabel('\lambda, nm'), legend(legendlabel{:})
 hold off
