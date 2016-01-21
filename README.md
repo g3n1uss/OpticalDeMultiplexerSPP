@@ -1,8 +1,8 @@
 # OpticalImpedanceDeMultiplexerSPP
 
-## What is "demultiplexor", "SPP", "Impedance"?
+## What are all these terms: "demultiplexor", "SPP", "Impedance", etc?
 
-Answers on these and other questions can be found on the corresponding [wiki page](https://github.com/g3n1uss/OpticalImpedanceDeMultiplexerSPP/wiki).
+The answers on these and other questions can be found on the corresponding [wiki page](https://github.com/g3n1uss/OpticalImpedanceDeMultiplexerSPP/wiki).
 
 ## What should I do to run the code?
 
