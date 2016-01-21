@@ -11,7 +11,7 @@ that equally distributes the energy of a single beam from the helium-neon
 laser into two outgoing spectra. Along with the impedance grating you get 
 graphs representing the resonance harmonics `h_r`, outgoing normalized 
 fluxes and the absoption rate. A typical set of plots looks like this
-![tag](https://github.com/g3n1uss/OpticalImpedanceDeMultiplexerSPP/blob/master/pictures/Example2r1.png, "A typical output of the program")
+![tag](https://github.com/g3n1uss/OpticalImpedanceDeMultiplexerSPP/blob/master/pictures/Example2r1.png "A typical output of the program")
 
 ## What are the default parameters?
 
