@@ -1,25 +1,25 @@
 # OpticalImpedanceDeMultiplexerSPP
 
-## What are all these terms: "demultiplexor", "SPP", "Impedance", etc?
+## What all these "demultiplexor", "SPP", "Impedance", etc. mean?
 
-The answers on these and other questions can be found on the corresponding [wiki page](https://github.com/g3n1uss/OpticalImpedanceDeMultiplexerSPP/wiki).
+The answers on these and other questions can be found at the corresponding [wiki page](https://github.com/g3n1uss/OpticalImpedanceDeMultiplexerSPP/wiki).
 
 ## What should I do to run the code?
 
-Simply execute "run_me.m" in Matlab and you will get the impedance grating 
+Simply execute "run_me.m" in Matlab. As output one gets the impedance grating 
 that equally distributes the energy of a single beam from the helium-neon 
-laser into two outgoing spectra. Along with the impedance grating, which is 
-characterized by `u_r` and `psi_n` you get a bunch of plots representing the 
-resonance harmonics `|h_r|^2`, outgoing normalized fluxes `s_i` and the 
+laser into two outgoing beams. Along with the impedance grating, which is 
+characterized by `u_r` and `psi_n`, you get a bunch of plots representing the 
+resonance harmonics `|h_r|^2`, outgoing normalized energy fluxes `s_i` and the 
 absoption rate `A`. A typical set of plots looks like this
 ![tag](https://github.com/g3n1uss/OpticalImpedanceDeMultiplexerSPP/blob/master/pictures/Example4r1.png "A typical output of the program")
 
 ## What are the default parameters?
 
 The default parameters are
-- gold film
+- a gold film
 - the resonace is in 1st order
-- the fallen beam is from a helium-neon laser
+- the incident beam is from a helium-neon laser
 - the inclination angle is 10 degrees, which is chosen randomly.
 
 ## Where can I find other examples?
