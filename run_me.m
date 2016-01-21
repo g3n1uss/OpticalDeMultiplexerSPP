@@ -14,7 +14,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Enter properties of the film, characteristics of the material
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Let's say we consider a gold film
+% Let's say we consider a gold film, this data can found in special tables
 plasma_freq=13.8*10^15;% plasma frequency of gold
 absorp_coef=10^14;% absorption coefficient of gold
 
