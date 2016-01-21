@@ -1,15 +1,17 @@
 # OpticalImpedanceDeMultiplexerSPP
 
 ## How to run the code?
-To try the code run "run_me.m".
+
+To see what the code does - execute "run_me.m" in Matlab. It will run the 
+code with the default parameters.
 
 ## What is "demultiplexor", "SPP", "Impedance"?
 
 Answers on these and other questions can be found on the corresponding [wiki page](https://github.com/g3n1uss/OpticalImpedanceDeMultiplexerSPP/wiki).
 
-## What are the default settings?
+## What are the default parameters?
 
-Default settings include a gold film, the resonace in 1st order, 
+Default parameters include a gold film, the resonace in 1st order, 
 the fallen beam from a helium-neon laser and the inclination angle 
 10 degrees, which is chosen randomly.
 
