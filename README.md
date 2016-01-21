@@ -8,9 +8,10 @@ The answers on these and other questions can be found on the corresponding [wiki
 
 Simply execute "run_me.m" in Matlab and you will get the impedance grating 
 that equally distributes the energy of a single beam from the helium-neon 
-laser into two outgoing spectra. Along with the impedance grating you get 
-graphs representing the resonance harmonics `h_r`, outgoing normalized 
-fluxes and the absoption rate. A typical set of plots looks like this
+laser into two outgoing spectra. Along with the impedance grating, which is 
+characterized by `u_r` and `psi_n` you get a bunch of plots representing the 
+resonance harmonics `|h_r|^2`, outgoing normalized fluxes `s_i` and the 
+absoption rate `A`. A typical set of plots looks like this
 ![tag](https://github.com/g3n1uss/OpticalImpedanceDeMultiplexerSPP/blob/master/pictures/Example1r1.png "A typical output of the program")
 
 ## What are the default parameters?
