@@ -15,9 +15,11 @@ fluxes and the absoption rate. A typical set of plots looks like this
 
 ## What are the default parameters?
 
-Default parameters include a gold film, the resonace in 1st order, 
-the fallen beam from a helium-neon laser and the inclination angle 
-10 degrees, which is chosen randomly.
+The default parameters are
+- gold film
+- the resonace is in 1st order
+- the fallen beam is from a helium-neon laser
+- the inclination angle is 10 degrees, which is chosen randomly.
 
 ## Where can I find other examples?
 
@@ -43,3 +45,5 @@ Input data must contain:
 2. Add 3D data plot
 3. Add double resonance
 4. Finish wiki page
+5. Add titles to the graphs
+6. Expand this readme file
