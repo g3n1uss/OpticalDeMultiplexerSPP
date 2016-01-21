@@ -16,16 +16,16 @@ absoption rate `A`. A typical set of plots looks like this
 
 Input data must contain:
 
-1. characteristics of the material including
-  - plasma frequency "omega_p"
-  - absoption coefficient "eta"
+1. characteristics of the material (can be found in specific tables, e.g. optical properties of metals) including
+  - plasma frequency "plasma_freq"
+  - absoption coefficient "absopr_coef"
   
 2. specifics of the resonance one would like to consider
-  - diffracted spectra in which resonance is wanted "r"
-  - wavelength of the fallen beam "lambda_res"
-  - angle at which the beam falls "theta_res"
+  - diffracted spectra in which resonance is wanted "order_res"
+  - wavelength of the incident beam "wavelength_res" (for example, wavelength of a laser)
+  - angle at which the beam falls "angle_res"
   
-3. desired distribution of outgoing spectra "fluxes"
+3. desired distribution of outgoing spectra "energy_fluxes"
 
 ## What is the default input?
 
