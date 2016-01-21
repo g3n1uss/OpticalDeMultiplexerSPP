@@ -1,56 +1,51 @@
-% This is the configuration script than after entering all the necessary 
-%configuration data runs the main function "MainFunction"
+% This script runs the main function
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% The input data MUST include
-% "plasma_freq" - plasma frequency of a particular metal
-% "absorp_coef" - absorption coefficient of a particular metal
-% "order_res" - the number of a diffracted spectra at which we want to
-% observe the resonance
-% "angle_res" - incident angle
-% "energy_fluxes" - the desired energy distributions among outgoing spectra
+% The input data must include
+% "plasma_freq" - the plasma frequency of a particular metal
+% "absorp_coef" - the absorption of a particular metal
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Enter properties of the film, characteristics of the material
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Let's say we consider a gold film
-plasma_freq=13.8*10^15;% plasma frequency of gold
-absorp_coef=10^14;% absorption coefficient of gold
+omega_p=13.8*10^15;% plasma frequency of gold
+eta=10^14;% absorption coefficient of gold
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Enter the resonance properties. Could be arbitrary
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% we want a resonance in order_res-th order
-order_res=1;
+% we want a resonance in r-th order
+r=1;
 % at this wavelength (the helium-neon laser)
-wavelength_res=632;
+lambda_res=632;
 % and at this angle
-angle_res=10;
+theta_res=10;
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Enter the desired energy distribution among energy fluxes
+% Enter the desired energy distribution among fluxes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-energy_fluxes=zeros(1,20);
-energy_fluxes(10)=0.25;energy_fluxes(9)=0.25;
+fluxes=zeros(1,20);
+fluxes(10)=0.25;fluxes(9)=0.25;
 
 % The main function find the grating and plots some graphs
-grating=MainFunction(plasma_freq,absorp_coef,wavelength_res,angle_res,order_res,energy_fluxes);
+grating=MainFunction(omega_p,eta,lambda_res,theta_res,r,fluxes);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Other examples
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % s=zeros(1,20);s(10)=0.25;s(9)=0.25;
-% order_res=1;angle_res=10;wavelength_res=632;
+% r=1;theta_res=10;lambda_res=632;
 % 
 % s=zeros(1,20);s(10)=0;s(9)=0.35;
-% order_res=-2;angle_res=30;wavelength_res=632;
+% r=-2;theta_res=30;lambda_res=632;
 % 
 % s=zeros(1,20);s(8)=0.1;s(9)=0.2;s(10)=0.3;
-% order_res=-3;angle_res=35;wavelength_res=632;
+% r=-3;theta_res=35;lambda_res=632;
 
 
 
