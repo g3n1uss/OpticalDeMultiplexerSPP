@@ -45,6 +45,3 @@ Other examples are in the end of file "run_me.m".
 1. Get rid of limitation of 20 outgoing spectra
 2. Add 3D data plot
 3. Add double resonance
-4. Finish wiki page
-5. Add titles to the graphs
-6. Expand this readme file
