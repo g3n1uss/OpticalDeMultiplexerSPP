@@ -1,3 +1,5 @@
+This project is modeling of a photonic demultiplexor utilizing the surface plasmon-polariton resonance on impedance gratings.
+
 ## What is this project about? What are all these "demultiplexor", "SPP", "Impedance", etc.? 
 
 The answers on these and other questions can be found at the corresponding [wiki page](https://github.com/g3n1uss/OpticalImpedanceDeMultiplexerSPP/wiki).
