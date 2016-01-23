@@ -2,6 +2,7 @@
 
 The answers on these and other questions can be found at the corresponding [wiki page](https://github.com/g3n1uss/OpticalImpedanceDeMultiplexerSPP/wiki).
 
+
 ## What should I do to run the code? What do I get as output?
 
 Simply execute "run_me.m" in Matlab. As output one gets the impedance grating 
@@ -39,7 +40,9 @@ The default configuration consist of
 
 Other examples are in the end of file "run_me.m".
 
+## What programming paradigm this code is written in?
 
+This project is a mixture of OOP and procedural paradigms, plus a configuration script.
 
 # TODO
 1. Get rid of limitation of 20 outgoing spectra
