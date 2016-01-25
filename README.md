@@ -47,6 +47,7 @@ Other examples are in the end of file "run_me.m".
 This project is a mixture of OOP and procedural paradigms, plus a configuration script.
 
 # TODO
-1. Get rid of limitation of 20 outgoing spectra
+1. Add a picture of the geometry to the output (picture of a resonance), instead of one long picture of the grating create two - one is a grating and a second one - picture of geometry
+2. Get rid of limitation of 20 outgoing spectra
 2. Add 3D data plot
 3. Add double resonance
