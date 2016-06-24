@@ -21,7 +21,7 @@ Input data must contain:
 
 1. characteristics of the material (can be found in specific tables, e.g. optical properties of metals) including
   - plasma frequency "plasma_freq"
-  - absoption coefficient "absopr_coef"
+  - absorption coefficient "absopr_coef"
   
 2. specifics of the resonance one would like to consider
   - diffracted spectra in which resonance is wanted "order_res"
@@ -34,7 +34,7 @@ Input data must contain:
 
 The default configuration consist of
 - a gold film
-- the resonace is in 1st order
+- the resonance is in 1st order
 - the incident beam is from a helium-neon laser
 - the inclination angle is 10 degrees, which is chosen randomly.
 
