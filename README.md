@@ -2,7 +2,7 @@
 
 ## What is this project about? What are all these "demultiplexor", "SPP", "Impedance", etc.? 
 
-The answers on these and other questions can be found on [this wiki page](https://github.com/g3n1uss/OpticalImpedanceDeMultiplexerSPP/wiki).
+The answers on these and other questions can be found on [this wiki page](/wiki).
 
 
 ## What should I do to run the code? What do I get as output?
@@ -13,7 +13,7 @@ laser into two outgoing beams. Along with the impedance grating, which is
 characterized by `u_r` and `psi_n`, you get a bunch of plots representing the 
 resonance harmonics `|h_r|^2`, outgoing normalized energy fluxes `s_i` and the 
 absoption rate `A`. A typical set of plots looks like this
-![tag](https://github.com/g3n1uss/OpticalImpedanceDeMultiplexerSPP/blob/master/pictures/Example4r1.png "A typical output of the program")
+![tag](/blob/master/pictures/Example4r1.png "A typical output of the program")
 
 ## What should I enter as input?
 
