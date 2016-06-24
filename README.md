@@ -13,7 +13,7 @@ laser into two outgoing beams. Along with the impedance grating, which is
 characterized by `u_r` and `psi_n`, you get a bunch of plots representing the 
 resonance harmonics `|h_r|^2`, outgoing normalized energy fluxes `s_i` and the 
 absoption rate `A`. A typical set of plots looks like this
-![tag](/blob/master/pictures/Example4r1.png "A typical output of the program")
+![tag](/pictures/Example4r1.png "A typical output of the program")
 
 ## What should I enter as input?
 
