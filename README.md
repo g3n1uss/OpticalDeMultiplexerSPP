@@ -2,7 +2,7 @@
 
 ## What is this project about? What are all these "demultiplexor", "SPP", "Impedance", etc.? 
 
-The answers on these and other questions can be found on [this wiki page](/wiki).
+The answers on these and other questions can be found on [this wiki page](../../wiki).
 
 
 ## What should I do to run the code? What do I get as output?
