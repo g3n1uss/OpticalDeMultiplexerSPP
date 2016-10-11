@@ -1,46 +1,40 @@
-#### This project is basically about modeling of a photonic demultiplexor utilizing the surface plasmon-polariton resonance on impedance gratings.
+#### This project models a photonic demultiplexor utilizing the surface plasmon-polariton resonance on impedance gratings.
 
 ## What is this project about? What are all these "demultiplexor", "SPP", "Impedance", etc.? 
 
-The answers on these and other questions can be found on [this wiki page](../../wiki).
+The answers to these and other questions can be found on [this wiki page](../../wiki).
 
 
 ## What should I do to run the code? What do I get as output?
 
-Simply execute "run_me.m" in Matlab. As output one gets the impedance grating 
-that equally distributes the energy of a single beam from the helium-neon 
-laser into two outgoing beams. Along with the impedance grating, which is 
-characterized by `u_r` and `psi_n`, you get a bunch of plots representing the 
-resonance harmonics `|h_r|^2`, outgoing normalized energy fluxes `s_i` and the 
-absoption rate `A`. A typical set of plots looks like this
-![tag](/pictures/Example4r1.png "A typical output of the program")
+Simply execute `run_me.m` in MatLab. As output you get the impedance grating equally distributing the energy of the helium-neon laser beam into two outgoing beams. Along with the impedance grating, which is characterized by the amplitudes `u_n` and the phases `psi_n`, the code generates a bunch of plots representing the resonance harmonics `|h_r|^2`, outgoing normalized energy fluxes `s_i` and the absoption rate `A`. A typical set of plots looks like this ![tag](/pictures/Example4r1.png "A typical output.")
 
 ## What should I enter as input?
 
-Input data must contain:
+Input parameters (located in the script `run_me.m`) must contain:
 
-1. characteristics of the material (can be found in specific tables, e.g. optical properties of metals) including
-  - plasma frequency "plasma_freq"
-  - absorption coefficient "absopr_coef"
+1. characteristics of the material (can be found in the specific tables, e.g. optical properties of metals) including
+  - plasma frequency `plasma_freq`
+  - absorption coefficient `absopr_coef`
   
-2. specifics of the resonance one would like to consider
-  - diffracted spectra in which resonance is wanted "order_res"
-  - wavelength of the incident beam "wavelength_res" (for example, wavelength of a laser)
-  - angle at which the beam falls "angle_res"
+2. properties of the resonance
+  - resonance happens in the `order_res` order
+  - wavelength of the falling beam `wavelength_res` (for example, the laser's wavelength)
+  - inclination angle `angle_res`
   
-3. desired distribution of outgoing spectra "energy_fluxes"
+3. desired distribution of outgoing spectrum "energy_fluxes"
 
 ## What is the default input?
 
-The default configuration consist of
-- a gold film
-- the resonance is in 1st order
-- the incident beam is from a helium-neon laser
-- the inclination angle is 10 degrees, which is chosen randomly.
+The default configuration is:
+- gold film
+- resonance in the 1st order
+- incident beam is from a helium-neon laser
+- inclination angle is 10 degrees (chosen randomly).
 
 ## Where can I find other examples?
 
-Other examples are in the end of file "run_me.m".
+Other examples are in the end of file `run_me.m`.
 
 ## What programming paradigm this code is written in?
 
